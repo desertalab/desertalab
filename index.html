@@ -1,1 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- ===== SEO ===== -->
+<title>Deserta Lab — Building the future of local commerce · LAONI is our first product</title>
+<meta name="description" content="Deserta Lab builds technology that helps neighbourhoods thrive. LAONI, our first product, makes the shops around you easy to discover and delivers what you need fast. Join early access.">
+<meta name="keywords" content="Deserta Lab, LAONI, local commerce, hyperlocal, shops near me, Mysuru, India, delivery">
+<meta name="author" content="Deserta Lab">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://desertalab.com/">
+<meta name="theme-color" content="#0A0810">
+
+<!-- ===== OPEN GRAPH / TWITTER ===== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Deserta Lab">
+<meta property="og:title" content="Deserta Lab — Building the future of local commerce">
+<meta property="og:description" content="LAONI, our first product, makes the shops around you easy to discover and delivers what you need fast.">
+<meta property="og:url" content="https://desertalab.com/">
+<meta property="og:image" content="https://desertalab.com/og-image.png">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deserta Lab — Building the future of local commerce">
+<meta name="twitter:description" content="LAONI, our first product, brings your neighbourhood's shops to your fingertips.">
+<meta name="twitter:image" content="https://desertalab.com/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Deserta Lab",
+  "url": "https://desertalab.com",
+  "description": "Deserta Lab builds technology for local commerce. LAONI is its first product.",
+  "makesOffer": { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "LAONI", "description": "Discover what's in the shops around you and get it delivered fast." } }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#0A0810; --ink-2:#0F0B1A; --panel:#140E22; --panel-2:#19112c; --line:#241b3a; --line-2:#312446;
+    --violet:#8B5CF6; --violet-2:#A855F7; --violet-3:#7C3AED; --violet-soft:#b794ff;
+    --lavender:#D6C7FF; --lavender-soft:#9c8fc4; --mint:#34D399; --amber:#F5B544;
+    --text:#F4F1FB; --muted:#9387ad; --muted-2:#766b91; --maxw:1160px; --r:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  svg{display:block}
+  ::selection{background:var(--violet-3);color:#fff}
+  :focus-visible{outline:2px solid var(--violet-2);outline-offset:3px;border-radius:6px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  .serif{font-family:'Playfair Display',serif}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--violet-soft)}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--violet-3);color:#fff;padding:10px 16px;border-radius:8px;z-index:200}
+  .skip-link:focus{left:12px;top:12px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:15px;border-radius:999px;border:1px solid transparent;cursor:pointer;padding:14px 28px;transition:transform .2s,box-shadow .3s,background .2s,border-color .2s;font-family:inherit}
+  .btn-primary{background:linear-gradient(135deg,var(--violet-2),var(--violet-3));color:#fff;box-shadow:0 12px 34px -10px rgba(139,92,246,.75)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 46px -10px rgba(139,92,246,.95)}
+  .btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border-color:var(--line-2)}
+  .btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--violet-2)}
+  .btn-survey{background:rgba(52,211,153,.1);color:var(--mint);border-color:rgba(52,211,153,.4)}
+  .btn-survey:hover{background:rgba(52,211,153,.18)}
+
+  /* nav — Deserta Lab highlighted */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(18px);background:rgba(10,8,16,.5);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+  nav.scrolled{border-bottom:1px solid var(--line);background:rgba(10,8,16,.86)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:22px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--violet-2),var(--violet-3));display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:700;font-size:17px;color:#fff;box-shadow:0 8px 20px -6px rgba(139,92,246,.7)}
+  .brand .nm{font-family:'Playfair Display',serif;font-size:23px;font-weight:600;letter-spacing:.01em;line-height:1}
+  .brand .nm small{display:block;font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-2);font-weight:600;margin-top:3px}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-size:14.5px;color:var(--muted);font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--text)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .menu-btn{display:none;background:none;border:0;color:var(--text);cursor:pointer;font-size:25px}
+  .mobile-menu{display:none;flex-direction:column;padding:6px 26px 24px;border-bottom:1px solid var(--line);background:rgba(10,8,16,.98)}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{padding:13px 0;color:var(--muted);border-bottom:1px solid var(--line);font-weight:500}
+  .mobile-menu .btn{margin-top:16px}
+
+  /* hero */
+  .hero{position:relative;padding:158px 0 92px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+  .glow{position:absolute;border-radius:50%;filter:blur(20px)}
+  .glow.a{top:-120px;right:-60px;width:560px;height:560px;background:radial-gradient(circle,rgba(124,58,237,.4),transparent 62%)}
+  .glow.b{bottom:-180px;left:-120px;width:520px;height:520px;background:radial-gradient(circle,rgba(168,85,247,.22),transparent 64%)}
+  .radar{position:absolute;top:42%;right:-6%;width:620px;height:620px;transform:translateY(-50%);opacity:.5}
+  .ring{position:absolute;inset:0;margin:auto;border:1px solid rgba(168,85,247,.22);border-radius:50%}
+  .ring.r1{width:26%;height:26%}.ring.r2{width:48%;height:48%}.ring.r3{width:70%;height:70%}.ring.r4{width:92%;height:92%}
+  .pulse{position:absolute;inset:0;margin:auto;width:26%;height:26%;border:1px solid rgba(168,85,247,.5);border-radius:50%;opacity:0;animation:pulse 5s ease-out infinite}
+  .pulse.d2{animation-delay:1.6s}.pulse.d3{animation-delay:3.2s}
+  @keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(3.4);opacity:0}}
+  .core-dot{position:absolute;inset:0;margin:auto;width:14px;height:14px;border-radius:50%;background:var(--violet-2);box-shadow:0 0 26px 4px rgba(168,85,247,.8)}
+  .blip{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 14px var(--mint)}
+  .blip.b1{top:24%;left:36%}.blip.b2{top:62%;left:30%}.blip.b3{top:40%;left:72%}.blip.b4{top:72%;left:64%}
+  .hero .wrap{position:relative;z-index:2}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  .status-pill{display:inline-flex;align-items:center;gap:9px;padding:8px 18px;border:1px solid var(--line-2);border-radius:999px;background:rgba(255,255,255,.03);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--lavender);margin-bottom:26px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint)}
+  .hero h1{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(38px,5.6vw,68px);line-height:1.07;letter-spacing:-.015em;margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:var(--lavender)}
+  .hero .sub{font-size:clamp(17px,2.1vw,20px);color:var(--muted);max-width:560px;margin-bottom:34px}
+  .hero .sub strong{color:var(--text);font-weight:500}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
+  .hero-trust{margin-top:30px;font-size:13.5px;color:var(--muted-2);display:flex;gap:8px;align-items:center}
+
+  /* product preview card (LAONI) */
+  .search-card{position:relative;border:1px solid var(--line-2);border-radius:24px;background:linear-gradient(180deg,var(--panel-2),var(--panel));padding:24px;box-shadow:0 30px 80px -30px rgba(124,58,237,.5)}
+  .pc-tag{position:absolute;top:-13px;left:24px;display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--violet-2),var(--violet-3));color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:999px;box-shadow:0 8px 20px -8px rgba(139,92,246,.8)}
+  .search-bar{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid var(--line-2);border-radius:14px;padding:15px 18px;margin-top:8px}
+  .search-bar .mag{color:var(--violet-soft);font-size:18px}
+  .search-bar .q{color:var(--lavender);font-size:15px}
+  .search-bar .car{width:1.5px;height:18px;background:var(--violet-2);animation:blink 1.1s steps(2) infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+  .res{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+  .res-row{display:flex;align-items:center;gap:13px;padding:13px 15px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.02)}
+  .res-row .ic{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,rgba(168,85,247,.25),rgba(124,58,237,.12));display:grid;place-items:center;font-size:17px;flex:0 0 38px}
+  .res-row .tx{flex:1;min-width:0}
+  .res-row .tt{font-size:14px;font-weight:600}
+  .res-row .mt{font-size:12px;color:var(--muted)}
+  .res-row .tag{font-size:11px;font-weight:600;color:var(--mint);border:1px solid rgba(52,211,153,.35);border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .res-row .tag.near{color:var(--lavender);border-color:var(--line-2)}
+
+  section{position:relative}
+  .sec{padding:100px 0}
+  .sec-head{max-width:680px;margin:0 auto 56px;text-align:center}
+  .sec-head.left{margin-left:0;text-align:left}
+  .sec-head h2{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(30px,4.4vw,48px);line-height:1.12;letter-spacing:-.01em;margin:14px 0 16px}
+  .sec-head p{color:var(--muted);font-size:18px}
+  .alt{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  /* brand architecture — Deserta Lab over LAONI */
+  .arch{max-width:760px;margin:0 auto;text-align:center}
+  .arch .parent{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:14px;border:1px solid var(--line-2);border-radius:24px;padding:34px 54px;background:linear-gradient(180deg,rgba(124,58,237,.16),var(--panel));box-shadow:0 24px 70px -34px rgba(124,58,237,.7)}
+  .arch .parent .mk{width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,var(--violet-2),var(--violet-3));display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:#fff;box-shadow:0 12px 28px -8px rgba(139,92,246,.8)}
+  .arch .parent .nm{font-family:'Playfair Display',serif;font-size:30px;font-weight:600}
+  .arch .parent .lb{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--violet-soft);font-weight:700}
+  .arch .stem{width:1.5px;height:42px;background:linear-gradient(var(--violet-2),var(--line-2));margin:0 auto}
+  .arch .kids{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}
+  .arch .kid{border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--panel)}
+  .arch .kid.live{border-color:var(--violet-2);background:linear-gradient(180deg,rgba(168,85,247,.1),var(--panel))}
+  .arch .kid .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+  .arch .kid .pn{font-family:'Playfair Display',serif;font-size:22px;font-weight:600}
+  .arch .kid .badge{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+  .arch .kid.live .badge{color:var(--mint);border:1px solid rgba(52,211,153,.4);background:rgba(52,211,153,.08)}
+  .arch .kid.soon .badge{color:var(--muted);border:1px solid var(--line-2)}
+  .arch .kid .pd{font-size:14px;color:var(--muted)}
+  .arch .kid.soon{opacity:.7}
+
+  /* how it works */
+  .laoni-badge{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-2);border-radius:999px;padding:7px 15px 7px 8px;font-size:12.5px;color:var(--lavender);margin-bottom:18px}
+  .laoni-badge .b{font-family:'Playfair Display',serif;font-weight:700;background:linear-gradient(135deg,var(--violet-2),var(--violet-3));color:#fff;border-radius:999px;padding:3px 12px;font-size:12px;letter-spacing:.08em}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{position:relative;border:1px solid var(--line);border-radius:var(--r);padding:34px 28px;background:linear-gradient(180deg,var(--panel),rgba(20,14,34,0));transition:transform .25s,border-color .25s}
+  .step:hover{transform:translateY(-5px);border-color:var(--line-2)}
+  .step .n{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--violet-2),var(--violet-3));display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:#fff;margin-bottom:20px;box-shadow:0 10px 24px -8px rgba(139,92,246,.7)}
+  .step h3{font-size:21px;margin-bottom:9px}
+  .step p{font-size:15px;color:var(--muted)}
+
+  .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .ben{border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;background:rgba(255,255,255,.018);transition:transform .25s,border-color .25s,background .25s}
+  .ben:hover{transform:translateY(-4px);border-color:var(--line-2);background:rgba(255,255,255,.03)}
+  .ben .ic{width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,rgba(168,85,247,.22),rgba(124,58,237,.1));border:1px solid var(--line-2);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+  .ben h3{font-size:19px;margin-bottom:8px}
+  .ben p{font-size:14.5px;color:var(--muted)}
+
+  .merchant-card{position:relative;overflow:hidden;border:1px solid var(--line-2);border-radius:28px;padding:56px;background:linear-gradient(135deg,rgba(124,58,237,.16),rgba(168,85,247,.05));display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+  .merchant-card h2{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(28px,4vw,42px);line-height:1.12;margin-bottom:16px}
+  .merchant-card p{color:var(--muted);font-size:17px;margin-bottom:26px;max-width:460px}
+  .mlist{display:flex;flex-direction:column;gap:14px}
+  .mlist .mi{display:flex;gap:13px;align-items:flex-start;font-size:15px}
+  .mlist .mi .ck{color:var(--mint);font-size:17px;flex:0 0 auto;margin-top:1px}
+  .mlist .mi b{font-weight:600}
+
+  .survey-band{border:1px solid rgba(52,211,153,.3);border-radius:24px;padding:40px;background:linear-gradient(180deg,rgba(52,211,153,.06),var(--panel));max-width:880px;margin:0 auto}
+  .survey-grid{display:grid;grid-template-columns:1fr auto;gap:38px;align-items:center}
+  .survey-copy .eyebrow{color:var(--mint)}
+  .survey-copy h3{font-family:'Playfair Display',serif;font-size:27px;margin:12px 0 10px}
+  .survey-copy .l{font-size:16px;color:var(--text);margin-bottom:6px}
+  .survey-copy .kn{font-size:14px;color:var(--muted);margin-bottom:22px}
+  .qr-card{background:#fff;border-radius:18px;padding:16px 16px 12px;text-align:center;box-shadow:0 16px 40px -16px rgba(0,0,0,.6)}
+  .qr-img{width:160px;height:160px;line-height:0}
+  .qr-cap{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0A0810}
+  .qr-cap span{color:#7C3AED}
+
+  .signup{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .form-card{border:1px solid var(--line);border-radius:22px;padding:32px;background:var(--panel)}
+  .form-card.merchant{background:linear-gradient(180deg,rgba(124,58,237,.08),var(--panel))}
+  .form-card h3{font-family:'Playfair Display',serif;font-size:25px;margin-bottom:5px}
+  .form-card .desc{font-size:14px;color:var(--muted);margin-bottom:22px}
+  .field{margin-bottom:13px}
+  .field label{display:block;font-size:12.5px;font-weight:600;color:var(--lavender-soft);margin-bottom:7px}
+  .field input,.field select{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line-2);border-radius:11px;padding:13px 15px;color:var(--text);font-family:inherit;font-size:15px;transition:border-color .2s}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--violet-2)}
+  .field select{appearance:none;cursor:pointer}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .form-card .btn{width:100%;margin-top:8px}
+  .form-success{display:none;text-align:center;padding:18px 0}
+  .form-success.show{display:block}
+  .form-success .tick{width:50px;height:50px;border-radius:50%;background:rgba(52,211,153,.13);border:1px solid var(--mint);color:var(--mint);display:grid;place-items:center;font-size:24px;margin:0 auto 14px}
+  .form-success h4{font-size:19px;margin-bottom:5px}
+  .form-success p{color:var(--muted);font-size:14px}
+
+  /* about deserta lab */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .about-grid .mk{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,3vw,30px);color:var(--lavender);line-height:1.4;margin-bottom:18px}
+  .about-grid p{color:var(--muted);font-size:16px;margin-bottom:16px}
+  .about-vals{display:flex;flex-direction:column;gap:14px}
+  .about-val{border:1px solid var(--line);border-radius:14px;padding:20px 22px;background:var(--panel)}
+  .about-val .t{font-size:16px;font-weight:600;margin-bottom:5px}
+  .about-val .d{font-size:14px;color:var(--muted)}
+
+  .faq{max-width:800px;margin:0 auto}
+  details{border:1px solid var(--line);border-radius:14px;padding:2px 22px;margin-bottom:11px;background:var(--panel)}
+  summary{cursor:pointer;list-style:none;padding:19px 0;font-size:16.5px;font-weight:600;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--violet-2);font-size:23px;font-weight:300;transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{color:var(--muted);font-size:15px;padding:0 0 21px;max-width:94%}
+
+  .final{padding:108px 0}
+  .final-card{position:relative;overflow:hidden;border-radius:34px;text-align:center;padding:80px 32px;background:linear-gradient(135deg,var(--violet-3),var(--violet) 55%,var(--violet-2))}
+  .final-card .fr{position:absolute;border:1px solid rgba(255,255,255,.16);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+  .final-card .fr.a{width:420px;height:420px}.final-card .fr.b{width:680px;height:680px}.final-card .fr.c{width:940px;height:940px}
+  .final-card .in{position:relative;z-index:2}
+  .final-card h2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(30px,5vw,52px);color:#fff;margin-bottom:14px;line-height:1.1}
+  .final-card p{color:rgba(255,255,255,.88);font-size:18px;max-width:520px;margin:0 auto 30px}
+  .final-card .hero-cta{justify-content:center}
+  .final-card .btn-primary{background:#fff;color:var(--violet-3);box-shadow:0 16px 44px -12px rgba(0,0,0,.45)}
+  .final-card .btn-ghost{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:#fff}
+
+  footer{border-top:1px solid var(--line);padding:58px 0 38px}
+  .foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px;margin-bottom:42px}
+  .foot-brand .row{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+  .foot-brand .mk{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--violet-2),var(--violet-3));display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:#fff}
+  .foot-brand .nm{font-family:'Playfair Display',serif;font-size:22px;font-weight:600}
+  .foot-brand p{color:var(--muted);font-size:13.5px;max-width:290px;margin-bottom:18px}
+  .foot-col h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lavender-soft);margin-bottom:15px}
+  .foot-col a{display:block;color:var(--muted);font-size:13.5px;margin-bottom:10px;transition:color .2s}
+  .foot-col a:hover{color:var(--text)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--muted-2);font-size:13px}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:880px){
+    .nav-links{display:none}.menu-btn{display:block}.nav-cta .btn-ghost{display:none}
+    .hero-grid{grid-template-columns:1fr;gap:48px}.radar{display:none}
+    .steps,.benefits,.signup,.arch .kids,.about-grid{grid-template-columns:1fr}
+    .merchant-card{grid-template-columns:1fr;padding:38px 28px}
+    .survey-grid{grid-template-columns:1fr;justify-items:center;text-align:center}.survey-copy{text-align:center}
+    .sec{padding:74px 0}.hero{padding:128px 0 70px}
+    .foot-top{grid-template-columns:1fr 1fr}
+    .arch .parent{padding:30px 32px}
+  }
+  @media(max-width:560px){.foot-top{grid-template-columns:1fr}}
+  @media(prefers-reduced-motion:reduce){.pulse,.car{animation:none;display:none}.reveal{transition:none;opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <span class="mark">D</span>
+      <span class="nm serif">Deserta Lab<small>Studio for local commerce</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#products">What we build</a>
+      <a href="#laoni">LAONI</a>
+      <a href="#shops">For shops</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#survey" class="btn btn-survey">Help Us Build LAONI</a>
+      <a href="#access" class="btn btn-primary">Get early access</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#products">What we build</a>
+    <a href="#laoni">LAONI</a>
+    <a href="#shops">For shops</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#survey" class="btn btn-survey">Help Us Build LAONI</a>
+    <a href="#access" class="btn btn-primary">Get early access</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- HERO — Deserta Lab led -->
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="glow a"></div><div class="glow b"></div>
+    <div class="radar">
+      <div class="ring r4"></div><div class="ring r3"></div><div class="ring r2"></div><div class="ring r1"></div>
+      <div class="pulse"></div><div class="pulse d2"></div><div class="pulse d3"></div>
+      <div class="blip b1"></div><div class="blip b2"></div><div class="blip b3"></div><div class="blip b4"></div>
+      <div class="core-dot"></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="status-pill"><span class="dot"></span> Deserta Lab · building in Mysuru</span>
+        <h1>We're building the future of <em>local commerce.</em></h1>
+        <p class="sub">Deserta Lab is a studio creating technology that helps your neighbourhood thrive. <strong>Our first product, LAONI, makes the shops around you easy to discover — and delivers what you need, fast.</strong></p>
+        <div class="hero-cta">
+          <a href="#laoni" class="btn btn-primary">Meet LAONI →</a>
+          <a href="#access" class="btn btn-ghost">Get early access</a>
+        </div>
+        <div class="hero-trust"><span class="dot"></span> One company, building real tools for local commerce</div>
+      </div>
+      <div class="reveal">
+        <div class="search-card">
+          <span class="pc-tag">◆ LAONI · our first product</span>
+          <div class="search-bar"><span class="mag">⌕</span><span class="q">monthly groceries under ₹5,000</span><span class="car"></span></div>
+          <div class="res">
+            <div class="res-row"><div class="ic">🛒</div><div class="tx"><div class="tt">Rice, atta &amp; staples</div><div class="mt">Sri Lakshmi Stores · 600 m</div></div><span class="tag">In stock</span></div>
+            <div class="res-row"><div class="ic">🥦</div><div class="tx"><div class="tt">Fresh vegetables</div><div class="mt">Green Basket · 900 m</div></div><span class="tag">In stock</span></div>
+            <div class="res-row"><div class="ic">🧴</div><div class="tx"><div class="tt">Household essentials</div><div class="mt">Daily Needs Mart · 1.2 km</div></div><span class="tag near">Nearby</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- BRAND ARCHITECTURE — Deserta Lab over LAONI -->
+<section id="products" class="alt">
+  <div class="wrap sec">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we build</span>
+      <h2>Everything we make lives under Deserta Lab.</h2>
+      <p>Deserta Lab is the company. LAONI is our first product — and the beginning of what we're building for local commerce.</p>
+    </div>
+    <div class="arch reveal">
+      <div class="parent">
+        <span class="mk">D</span>
+        <span class="lb">The company</span>
+        <span class="nm serif">Deserta Lab</span>
+      </div>
+      <div class="stem"></div>
+      <div class="kids">
+        <div class="kid live">
+          <div class="row"><span class="pn serif">LAONI</span><span class="badge">First product</span></div>
+          <div class="pd">Discover what's in the shops around you and get it delivered fast. Launching soon in Mysuru.</div>
+        </div>
+        <div class="kid soon">
+          <div class="row"><span class="pn serif">What's next</span><span class="badge">In the works</span></div>
+          <div class="pd">More products for local commerce, built on everything we learn from LAONI.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAONI — our first product -->
+<section id="laoni">
+  <div class="wrap sec">
+    <div class="sec-head reveal">
+      <span class="laoni-badge"><span class="b serif">LAONI</span> a Deserta Lab product</span>
+      <h2>Everything you need is already nearby.</h2>
+      <p>Tell LAONI what you need in your own words, and it does the searching across shops near you — no app-hopping.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Tell us what you need</h3><p>Search the way you'd say it — "fresh bread", "kids' stationery", or "monthly groceries under ₹5,000".</p></div>
+      <div class="step reveal"><div class="n">2</div><h3>Find it nearby, in stock</h3><p>LAONI shows you the products actually available in shops around you, right now — not a catalogue from across the country.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>Get it delivered</h3><p>Order from local shops and have it brought to your door in minutes — or pick it up yourself on the way home.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="alt">
+  <div class="wrap sec">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why LAONI</span>
+      <h2>Local shopping, finally made simple.</h2>
+      <p>The shops on your street already have what you need. LAONI just makes it easy to find and order.</p>
+    </div>
+    <div class="benefits">
+      <div class="ben reveal"><div class="ic">🔍</div><h3>Discover products, not stores</h3><p>Start from what you want. LAONI finds the product first, then the nearest shop that has it.</p></div>
+      <div class="ben reveal"><div class="ic">📍</div><h3>Everything close to home</h3><p>Results come from your own neighbourhood, so what you order is genuinely nearby and quick to arrive.</p></div>
+      <div class="ben reveal"><div class="ic">⚡</div><h3>Fast local delivery</h3><p>Because the shop is around the corner, your order doesn't travel far — it reaches you in minutes.</p></div>
+      <div class="ben reveal"><div class="ic">🏪</div><h3>Support your local shops</h3><p>Every order helps the small businesses in your area grow, instead of sending money far away.</p></div>
+      <div class="ben reveal"><div class="ic">🧺</div><h3>One place for daily needs</h3><p>Groceries, essentials, stationery and more — discover it all without jumping between apps.</p></div>
+      <div class="ben reveal"><div class="ic">💜</div><h3>Made for your city</h3><p>Built by Deserta Lab for how local commerce really works in India, starting close to home in Mysuru.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR SHOPS -->
+<section id="shops">
+  <div class="wrap sec">
+    <div class="merchant-card reveal">
+      <div>
+        <span class="eyebrow">For local shops</span>
+        <h2>Get discovered by customers right around you.</h2>
+        <p>Through LAONI, Deserta Lab helps neighbourhood shops become visible to nearby customers searching for exactly what you sell — without changing how you run your business.</p>
+        <div class="hero-cta">
+          <a href="#merchant" class="btn btn-primary">Register your shop →</a>
+          <a href="#survey" class="btn btn-ghost js-survey">Help Us Build LAONI</a>
+        </div>
+      </div>
+      <div class="mlist">
+        <div class="mi"><span class="ck">✓</span><span><b>Be found by nearby customers</b> looking for what you already stock.</span></div>
+        <div class="mi"><span class="ck">✓</span><span><b>Reach more people</b> without leaving your counter.</span></div>
+        <div class="mi"><span class="ck">✓</span><span><b>Join early</b> and help shape LAONI for shops like yours.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SURVEY -->
+<section id="survey" class="alt">
+  <div class="wrap sec">
+    <div class="survey-band reveal">
+      <div class="survey-grid">
+        <div class="survey-copy">
+          <span class="eyebrow">Merchant research · ಮಾರುಕಟ್ಟೆ ಸಂಶೋಧನೆ</span>
+          <h3 class="serif">Help us build LAONI</h3>
+          <div class="l">If you run a local shop, tell us about your business — your challenges, your delivery radius, and what would actually help. Under 3 minutes, in English and Kannada.</div>
+          <div class="kn">ನಿಮ್ಮ ವ್ಯಾಪಾರದ ಬಗ್ಗೆ ತಿಳಿಸಿ — ಇದು ಸಮೀಕ್ಷೆ, ಮಾರಾಟವಲ್ಲ. 3 ನಿಮಿಷಕ್ಕಿಂತ ಕಡಿಮೆ.</div>
+          <a href="#" class="btn btn-survey js-survey" target="_blank" rel="noopener">Take the merchant survey · ಸಮೀಕ್ಷೆಯಲ್ಲಿ ಭಾಗವಹಿಸಿ →</a>
+        </div>
+        <div class="qr-card">
+          <div class="qr-img"><svg width="160" height="160" role="img" aria-label="QR code to open the LAONI merchant survey" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41" class="segno"><path fill="#fff" d="M0 0h41v41h-41z"/><path class="qrline" stroke="#0a0810" d="M2 2.5h7m1 0h5m2 0h1m1 0h1m4 0h2m1 0h1m2 0h1m1 0h7m-37 1h1m5 0h1m2 0h1m3 0h1m2 0h2m1 0h1m2 0h2m1 0h1m2 0h1m1 0h1m5 0h1m-37 1h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m3 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m4 0h1m3 0h2m2 0h1m1 0h2m2 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m1 0h4m3 0h1m2 0h3m3 0h2m4 0h1m1 0h3m1 0h1m-37 1h1m5 0h1m3 0h3m3 0h2m1 0h1m2 0h1m2 0h2m1 0h1m1 0h1m5 0h1m-37 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-29 1h3m4 0h2m1 0h1m1 0h1m4 0h1m1 0h2m-24 1h2m3 0h3m3 0h1m2 0h1m1 0h3m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m-32 1h1m1 0h2m2 0h1m1 0h1m2 0h2m1 0h1m1 0h2m2 0h2m1 0h1m1 0h2m1 0h3m-34 1h8m2 0h2m1 0h4m1 0h1m3 0h5m1 0h1m1 0h2m2 0h1m-37 1h1m1 0h1m1 0h1m2 0h3m1 0h1m1 0h1m2 0h1m2 0h1m1 0h2m1 0h1m1 0h1m3 0h3m-30 1h2m1 0h3m1 0h2m1 0h2m4 0h1m3 0h2m2 0h1m2 0h3m2 0h1m-36 1h1m2 0h3m4 0h1m2 0h1m3 0h2m1 0h1m3 0h2m2 0h2m1 0h1m2 0h1m-35 1h1m1 0h1m3 0h2m1 0h4m1 0h2m3 0h1m2 0h1m1 0h1m2 0h4m2 0h1m1 0h2m-35 1h4m2 0h2m3 0h2m2 0h3m2 0h1m3 0h1m1 0h2m3 0h2m-32 1h4m4 0h2m2 0h1m2 0h2m1 0h1m2 0h2m3 0h2m1 0h1m1 0h1m1 0h1m-37 1h2m1 0h3m1 0h1m2 0h2m1 0h1m1 0h1m3 0h1m2 0h2m2 0h2m3 0h1m1 0h2m-35 1h3m2 0h3m1 0h5m1 0h1m1 0h4m1 0h1m3 0h2m2 0h2m2 0h1m1 0h1m-33 1h2m2 0h1m1 0h3m2 0h2m1 0h3m2 0h1m2 0h1m1 0h1m1 0h4m1 0h1m-35 1h1m1 0h1m2 0h1m3 0h2m1 0h1m2 0h1m1 0h2m2 0h6m1 0h4m1 0h1m1 0h1m-37 1h3m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m4 0h1m4 0h1m2 0h2m2 0h2m1 0h3m-37 1h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h3m1 0h4m2 0h4m2 0h1m2 0h1m3 0h3m-36 1h2m4 0h3m2 0h1m1 0h1m1 0h1m7 0h1m1 0h2m1 0h3m1 0h1m2 0h1m-37 1h7m1 0h3m3 0h2m2 0h2m1 0h2m2 0h2m1 0h5m1 0h1m1 0h1m-37 1h1m3 0h2m1 0h1m2 0h1m2 0h1m3 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h3m3 0h1m-35 1h1m1 0h5m1 0h2m2 0h1m2 0h4m1 0h1m4 0h2m3 0h1m4 0h2m-37 1h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h2m1 0h4m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h3m-37 1h1m4 0h3m1 0h1m1 0h1m1 0h1m1 0h3m1 0h2m1 0h1m2 0h2m1 0h6m2 0h1m-29 1h2m2 0h1m2 0h2m2 0h1m2 0h2m4 0h1m3 0h2m1 0h1m-36 1h7m5 0h4m1 0h1m1 0h2m1 0h4m2 0h1m1 0h1m1 0h3m1 0h1m-37 1h1m5 0h1m1 0h3m1 0h1m1 0h3m3 0h4m2 0h3m3 0h2m1 0h1m-36 1h1m1 0h3m1 0h1m2 0h1m2 0h1m5 0h3m3 0h2m1 0h6m1 0h2m-36 1h1m1 0h3m1 0h1m3 0h2m1 0h6m3 0h1m4 0h1m2 0h1m1 0h1m1 0h1m-35 1h1m1 0h3m1 0h1m5 0h1m1 0h2m1 0h1m1 0h2m2 0h3m3 0h1m1 0h1m2 0h1m1 0h1m-37 1h1m5 0h1m3 0h1m3 0h1m7 0h2m4 0h2m6 0h1m-37 1h7m3 0h2m1 0h1m1 0h4m1 0h1m4 0h1m2 0h3m1 0h2m2 0h1"/></svg></div>
+          <div class="qr-cap">Scan to open<br><span>ಸ್ಕ್ಯಾನ್ ಮಾಡಿ</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EARLY ACCESS + REGISTRATION -->
+<section id="access">
+  <div class="wrap sec">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Get involved</span>
+      <h2>Be first to use LAONI in your area.</h2>
+      <p>Join the early-access list as a shopper, or register your shop to be among the first when we launch.</p>
+    </div>
+    <div class="signup">
+      <div class="form-card reveal">
+        <h3>Early access</h3>
+        <p class="desc">For shoppers who want first access when LAONI opens nearby.</p>
+        <form class="js-form" data-form="early-access">
+          <div class="field"><label for="ea-name">Full name</label><input id="ea-name" name="name" required autocomplete="name" placeholder="Your name"></div>
+          <div class="form-row">
+            <div class="field"><label for="ea-mobile">Mobile</label><input id="ea-mobile" name="mobile" required inputmode="tel" autocomplete="tel" placeholder="10-digit number"></div>
+            <div class="field"><label for="ea-email">Email (optional)</label><input id="ea-email" name="email" type="email" autocomplete="email" placeholder="you@email.com"></div>
+          </div>
+          <div class="field"><label for="ea-zone">Your locality</label>
+            <select id="ea-zone" name="locality" required><option value="">Select your area…</option><option>Vijayanagar</option><option>Gokulam</option><option>Kuvempunagar</option><option>Nazarbad</option><option>Bannimantap</option><option>Siddarthanagar</option><option>Bogadi</option><option>Hootagalli</option><option>Jayalakshmipuram</option><option>Central Mysuru</option><option>Other</option></select>
+          </div>
+          <button type="submit" class="btn btn-primary">Join the waitlist →</button>
+        </form>
+        <div class="form-success"><div class="tick">✓</div><h4>You're on the list</h4><p>We'll reach out when LAONI opens in your area.</p></div>
+      </div>
+
+      <div class="form-card merchant reveal" id="merchant">
+        <h3>Register your shop</h3>
+        <p class="desc">For local shop owners who want to be among the first on LAONI.</p>
+        <form class="js-form" data-form="merchant-registration">
+          <div class="form-row">
+            <div class="field"><label for="m-shop">Shop name</label><input id="m-shop" name="business_name" required placeholder="e.g. Fresh Mart"></div>
+            <div class="field"><label for="m-owner">Owner name</label><input id="m-owner" name="owner_name" required placeholder="Your name"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="m-mobile">Mobile</label><input id="m-mobile" name="mobile" required inputmode="tel" placeholder="10-digit number"></div>
+            <div class="field"><label for="m-cat">Category</label>
+              <select id="m-cat" name="category" required><option value="">Select…</option><option>Grocery / Kirana</option><option>Fruits &amp; Vegetables</option><option>Pharmacy</option><option>Dairy</option><option>Bakery</option><option>Restaurant / Food</option><option>Fashion &amp; Clothing</option><option>Electronics &amp; Mobile</option><option>Hardware</option><option>Stationery</option><option>Beauty &amp; Cosmetics</option><option>Home &amp; Kitchen</option><option>Pet Store</option><option>Other</option></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="m-zone">Locality</label>
+              <select id="m-zone" name="locality" required><option value="">Select your area…</option><option>Vijayanagar</option><option>Gokulam</option><option>Kuvempunagar</option><option>Nazarbad</option><option>Bannimantap</option><option>Siddarthanagar</option><option>Bogadi</option><option>Hootagalli</option><option>Jayalakshmipuram</option><option>Central Mysuru</option><option>Other</option></select>
+            </div>
+            <div class="field"><label for="m-radius">Delivery radius</label>
+              <select id="m-radius" name="radius" required><option value="">Select…</option><option>Up to 1 km</option><option>Up to 2 km</option><option>Up to 3 km</option><option>Up to 5 km</option><option>More than 5 km</option><option>Depends on order value</option></select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Register your shop →</button>
+        </form>
+        <div class="form-success"><div class="tick">✓</div><h4>Thank you</h4><p>We'll reach out about joining LAONI in your area.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT DESERTA LAB -->
+<section id="about" class="alt">
+  <div class="wrap sec">
+    <div class="sec-head reveal">
+      <span class="eyebrow">About Deserta Lab</span>
+      <h2>One company, building for local commerce.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="mk">“The shops around you should be as easy to discover as anything online.”</p>
+        <p>Deserta Lab is a small studio building technology for the way commerce really works in Indian neighbourhoods. We believe the corner shop deserves the same great tools as the biggest brands — and that local businesses should be empowered, not replaced.</p>
+        <p>LAONI is our first product, and we're starting close to home in Mysuru, with the shops and streets that make a city feel like home. Everything we build going forward lives under Deserta Lab.</p>
+      </div>
+      <div class="about-vals reveal">
+        <div class="about-val"><div class="t">Local first</div><div class="d">We build for neighbourhoods, not faceless national catalogues.</div></div>
+        <div class="about-val"><div class="t">Empower shops</div><div class="d">Help small businesses grow with tools that fit how they already work.</div></div>
+        <div class="about-val"><div class="t">Build honestly</div><div class="d">We're early — and we'd rather show you the real thing than a promise.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap sec">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Good to know.</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary>What is Deserta Lab?</summary><p>Deserta Lab is the company building technology for local commerce. LAONI is our first product — a way to discover and order from the shops near you.</p></details>
+      <details><summary>And what is LAONI?</summary><p>LAONI lets you search for what you need and find it in stock in shops around you, then get it delivered. Instead of picking a store first, you start from the product.</p></details>
+      <details><summary>Is LAONI available yet?</summary><p>Not quite — we're launching soon, starting in Mysuru. Join early access and we'll let you know the moment it opens in your area.</p></details>
+      <details><summary>Will it cost me anything to use?</summary><p>LAONI is free to join and browse. We'll share full details with our early-access members before launch.</p></details>
+      <details><summary>I run a shop — how do I join?</summary><p>Register your shop on this page, or take the short merchant survey. Both help us bring LAONI to your neighbourhood and build it around what shops like yours actually need.</p></details>
+      <details><summary>How is my information used?</summary><p>Your details are used only to keep you updated about LAONI's launch and — for shops — the merchant pilot. Nothing else.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <div class="fr a"></div><div class="fr b"></div><div class="fr c"></div>
+      <div class="in">
+        <h2>Your neighbourhood, at your fingertips.</h2>
+        <p>Join early access for LAONI, or — if you run a shop — register and help Deserta Lab build it for your area.</p>
+        <div class="hero-cta">
+          <a href="#access" class="btn btn-primary">Get early access →</a>
+          <a href="#survey" class="btn btn-ghost js-survey">Help Us Build LAONI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER — Deserta Lab primary -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="row"><span class="mk serif">D</span><span class="nm serif">Deserta Lab</span></div>
+        <p>Building the future of local commerce. LAONI is our first product, starting in Mysuru.</p>
+        <a href="#survey" class="btn btn-survey js-survey">Help Us Build LAONI →</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#products">What we build</a>
+        <a href="#about">About Deserta Lab</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:hello@desertalab.com">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>LAONI</h4>
+        <a href="#laoni">How it works</a>
+        <a href="#why">Why LAONI</a>
+        <a href="#access">Early access</a>
+        <a href="#shops">For shops</a>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of use</a>
+        <a href="mailto:hello@desertalab.com">hello@desertalab.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Deserta Lab · LAONI is a product of Deserta Lab</span>
+      <span>Building for local commerce, starting in Mysuru</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ===== CONFIG ===== */
+  var MERCHANT_SURVEY_URL = "https://forms.gle/851j3THDgiScrVtT9";   // Google Form (opens in new tab)
+  var FORM_ENDPOINT = "";   // Formspree / Getform / API route. "" = show success state only
+
+  document.querySelectorAll('.js-survey').forEach(function(a){ a.setAttribute('href', MERCHANT_SURVEY_URL); a.setAttribute('target','_blank'); a.setAttribute('rel','noopener'); });
+
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 16); });
+
+  var menuBtn = document.getElementById('menuBtn'), mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', function(){ var o = mobileMenu.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); menuBtn.textContent = o ? '✕' : '☰'; });
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mobileMenu.classList.remove('open'); menuBtn.textContent='☰'; menuBtn.setAttribute('aria-expanded',false); }); });
+
+  document.querySelectorAll('.js-form').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var card = form.closest('.form-card');
+      var data = Object.fromEntries(new FormData(form).entries());
+      data._type = form.getAttribute('data-form');
+      var done = function(){ form.style.display='none'; card.querySelector('.form-success').classList.add('show'); };
+      if(FORM_ENDPOINT){ fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).then(done).catch(done); }
+      else { done(); }
+    });
+  });
+
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold:.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
